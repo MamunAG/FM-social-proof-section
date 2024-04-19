@@ -1,0 +1,150 @@
+:root {
+    --VeryDarkMagenta: hsl(300, 43%, 22%);
+    --SoftPink: hsl(333, 80%, 67%);
+    --DarkGrayishMagenta: hsl(303, 10%, 53%);
+    --LightGrayishMagenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    --FontSize: 15px;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    height: 100%;
+    font-size: var(--FontSize);
+}
+
+body {
+    font-family: "League Spartan", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body,
+.container,
+.rating,
+.rating-left,
+.rating-right div,
+.review,
+.card-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 900px;
+    flex-direction: column;
+    /* border: 1px solid aqua; */
+}
+
+.rating {
+    margin-bottom: 40px;
+}
+
+.rating-left {
+    flex-direction: column;
+    flex-basis: 40%;
+}
+
+.rating-right {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-basis: 60%;
+    padding-left: 100px;
+    /* background-color: aqua; */
+}
+
+.rating-right div p {
+    margin-left: 30px;
+}
+
+.rating-left h1 {
+    font-size: 50px;
+    font-weight: 700;
+    color: var(--VeryDarkMagenta);
+    margin-bottom: 20px;
+}
+
+.rating-left p {
+    font-size: var(--FontSize);
+    color: var(--DarkGrayishMagenta);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.rating-right div {
+    flex-direction: row;
+
+    background-color: var(--LightGrayishMagenta);
+    padding: 15px 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+
+    width: 365px;
+}
+
+.rating-right div:nth-child(2) {
+    margin-left: 50px;
+}
+
+.rating-right div:nth-child(3) {
+    margin-left: 100px;
+}
+
+.card {
+    background-color: var(--VeryDarkMagenta);
+    margin-right: 20px;
+    border-radius: 10px;
+    padding: 30px;
+}
+
+.card-header {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.card-header img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+
+.card-header div {
+    padding-left: 20px;
+}
+
+.card-header p:first-child {
+    color: var(--White);
+}
+
+.card-header p:last-child {
+    color: var(--SoftPink);
+}
+
+.card p {
+    color: var(--White);
+}
+
+.card:nth-child(2) {
+    margin-top: 30px;
+}
+
+.card:nth-child(3) {
+    margin-top: 60px;
+}
