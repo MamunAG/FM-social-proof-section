@@ -13,8 +13,8 @@
 *::after {
     margin: 0;
     padding: 0;
-    list-style: none;
-    text-decoration: none;
+    /* list-style: none; */
+    /* text-decoration: none; */
     box-sizing: border-box;
 }
 
@@ -22,6 +22,7 @@ body,
 html {
     height: 100%;
     font-size: var(--FontSize);
+    overflow: auto;
 }
 
 body {
@@ -29,9 +30,13 @@ body {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-body,
+
 .container,
 .rating,
 .rating-left,
@@ -39,13 +44,13 @@ body,
 .review,
 .card-header {
     display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .container {
     width: 900px;
     flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
     /* border: 1px solid aqua; */
 }
 
@@ -55,6 +60,7 @@ body,
 
 .rating-left {
     flex-direction: column;
+    justify-content: flex-start;
     flex-basis: 40%;
 }
 
@@ -64,6 +70,7 @@ body,
     justify-content: center;
     align-items: flex-start;
     flex-direction: column;
+    justify-content: flex-start;
     flex-basis: 60%;
     padding-left: 100px;
     /* background-color: aqua; */
@@ -96,6 +103,13 @@ body,
     margin-bottom: 10px;
 
     width: 365px;
+}
+
+.rating-right .star {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    width: 110px;
 }
 
 .rating-right div:nth-child(2) {
@@ -147,4 +161,63 @@ body,
 
 .card:nth-child(3) {
     margin-top: 60px;
+}
+
+@media screen and (max-width: 375px) {
+    .container {
+        width: 100%;
+        height: 800px;
+        overflow: auto;
+        padding: 20px;
+        position: absolute;
+        top: 0px;
+    }
+
+    .rating {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+
+    .rating-right {
+        box-sizing: border-box;
+        flex-basis: 100%;
+        padding: 10px;
+        /* width: 100%; */
+    }
+
+    .rating-right div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .star p {
+        margin: auto;
+    }
+
+    .rating-right div:nth-child(2) {
+        margin-left: 0px;
+    }
+
+    .rating-right div:nth-child(3) {
+        margin-left: 0;
+    }
+
+
+    .review {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .review .card {
+        margin: 0;
+        margin-bottom: 10px;
+    }
 }
