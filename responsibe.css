@@ -1,0 +1,68 @@
+@media screen and (max-width: 375px) {
+    .container {
+        width: 100%;
+        height: 800px;
+        overflow: auto;
+        padding: 20px;
+        position: absolute;
+        top: 0px;
+    }
+
+    .rating {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .rating-left h1 {
+        font-size: 35px;
+        text-align: center;
+    }
+
+    .rating-left p {
+        text-align: center;
+        font-size: 13px;
+
+    }
+
+    .rating-right {
+        box-sizing: border-box;
+        flex-basis: 100%;
+        padding: 10px;
+        /* width: 100%; */
+    }
+
+    .rating-right div {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+    }
+
+    .star p {
+        margin: auto;
+    }
+
+    .rating-right div:nth-child(2) {
+        margin-left: 0px;
+    }
+
+    .rating-right div:nth-child(3) {
+        margin-left: 0;
+    }
+
+
+    .review {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+    }
+
+    .review .card {
+        margin: 0;
+        margin-bottom: 10px;
+    }
+}
